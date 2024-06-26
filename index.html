@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>En Kazançlı Hisse</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var socket = io();
+            socket.on('update', function(data) {
+                document.getElementById('time').innerText = "Güncelleme Zamanı: " + data.time;
+                document.getElementById('stock').innerText = "En Kazançlı Hisse: " + data.stock;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>En Kazançlı Hisse</h1>
+    <p id="time">Güncelleme Zamanı: --</p>
+    <p id="stock">En Kazançlı Hisse: --</p>
+</body>
+</html>
