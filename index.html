@@ -7,8 +7,8 @@
         document.addEventListener("DOMContentLoaded", function() {
             var socket = io();
             socket.on('update', function(data) {
-                document.getElementById('time').innerText = "Güncelleme Zamanı: " + data.time;
-                document.getElementById('stock').innerText = "En Kazançlı Hisse: " + data.stock;
+                document.getElementById('time').innerHTML = "Güncelleme Zamanı: " + data.time;
+                document.getElementById('stock').innerHTML = "En Kazançlı Hisse: " + data.stock;
             });
         });
     </script>
