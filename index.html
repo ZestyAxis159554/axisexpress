@@ -3,6 +3,23 @@
 <head>
     <title>En Kazançlı Hisse</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+        }
+    </style>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function() {
             var socket = io();
@@ -14,8 +31,10 @@
     </script>
 </head>
 <body>
-    <h1>En Kazançlı Hisse</h1>
-    <p id="time">Güncelleme Zamanı: --</p>
-    <p id="stock">En Kazançlı Hisse: --</p>
+    <div class="container">
+        <h1>En Kazançlı Hisse</h1>
+        <p id="time">Güncelleme Zamanı: --</p>
+        <p id="stock">En Kazançlı Hisse: --</p>
+    </div>
 </body>
 </html>
